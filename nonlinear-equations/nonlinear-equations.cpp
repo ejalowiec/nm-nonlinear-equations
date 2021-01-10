@@ -18,8 +18,8 @@ int main() {
 	cout << "Function: 1/3x^3 - 1" << endl;
 	cout << "Derivative: x^2" << endl;
 	cout << "Interval: a=0.01, b=2" << endl;
-	cout << "f(" << a << ")=" << nonlinearFunction(a) << setw(8) << "f(" << b << ")=" << nonlinearFunction(b) << endl;
-	cout << newtonMethod(a, b, errorValue);
+	cout << "f(" << a << ")=" << nonlinearFunction(a) << setw(8) << "f(" << b << ")=" << nonlinearFunction(b) << endl << endl;
+	cout << "\nResult: " << newtonMethod(a, b, errorValue);
 
 
 	cout << endl;
@@ -35,17 +35,16 @@ double derivativeOfFunction(double x) {
 }
 
 double newtonMethod(double a, double b, double error) {
-	if (nonlinearFunction(a) * nonlinearFunction(b) < 0) {
+	if (nonlinearFunction(a) * nonlinearFunction(b) < 0 and a < b) {
 		unsigned int counter = 0;
-		cout << endl << "Iterations: " << endl;
 		while (abs(nonlinearFunction(a)) > error) {
 			a -= nonlinearFunction(a) / derivativeOfFunction(a);
-			cout << "x_" << counter << ": " << setprecision(12) << a << endl;
+			cout << "Iteration " << counter << ": " << setprecision(9) << a << endl;
 			counter++;
 		}
 		return a;
 	}
 	else
-		cout << "Interval incorrect!" << endl;
+		cerr << "Interval incorrect!" << endl;
 	return -1;
 }
