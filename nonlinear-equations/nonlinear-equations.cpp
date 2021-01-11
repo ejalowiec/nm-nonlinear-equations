@@ -6,8 +6,8 @@
 // set the interval
 #define A 0.01
 #define B 2
-#define C 1.4
-#define D 1.5
+#define C 1.3
+#define D 1.7
 // set precision
 #define PRECISION 1e-4
 
@@ -26,14 +26,14 @@ int main() {
 	cout << "Function: 1/3x^3 - 1" << endl;
 	cout << "Derivative: x^2" << endl;
 	cout << "Interval: a = " << A << ", b = " << B << endl;
-	cout << "f(" << A << ") = " << nonlinearFunction(A) << setw(8) << "f(" << B << ") = " << nonlinearFunction(B) << endl << endl;
+	cout << "f(" << C << ") = " << nonlinearFunction(C) << setw(8) << "f(" << D << ") = " << nonlinearFunction(D) << endl << endl;
 	//cout << "Newton's method:\n\n";
-	//cout << "\nValue of F(x): " << newtonMethod_ex1(A, B, PRECISION) << endl;
-	//cout << "\nValue of F(x): " << newtonMethod_ex2(A, B) << endl;
+	//cout << "\nx is equal to: " << newtonMethod_ex1(A, B, PRECISION) << endl;
+	//cout << "\nx is equal to: " << newtonMethod_ex2(A, B) << endl;
 
 	cout << "Secant method:\n\n";
-	cout << "\nValue of F(x): " << secantMethod_ex1(A, B, PRECISION) << endl;
-	//cout << "\nValue of F(x): " << secantMethod_ex2(A, B) << endl;
+	//cout << "\nx is equal to: " << secantMethod_ex1(C, D, PRECISION) << endl;
+	cout << "\nx is equal to: " << secantMethod_ex2(C, D) << endl;
 
 	cout << endl;
 	return 0;
