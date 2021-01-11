@@ -13,14 +13,14 @@ double newtonMethod(double, double, double);
 int main() {
 	// set the interval
 	double a = 0.01, b = 2;
-	double errorValue = 1e-7;
+	double errorValue = 1e-4;
 
 	cout << "Function: 1/3x^3 - 1" << endl;
 	cout << "Derivative: x^2" << endl;
 	cout << "Interval: a=0.01, b=2" << endl;
 	cout << "f(" << a << ")=" << nonlinearFunction(a) << setw(8) << "f(" << b << ")=" << nonlinearFunction(b) << endl << endl;
-	cout << "\nResult: " << newtonMethod(a, b, errorValue);
-
+	cout << "Newton's method:\n\n";
+	cout << "\nF(x)=0 <=> x=" << newtonMethod(a, b, errorValue) << endl;
 
 	cout << endl;
 	return 0;
