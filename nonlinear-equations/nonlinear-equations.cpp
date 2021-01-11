@@ -27,9 +27,11 @@ int main() {
 	cout << "Derivative: x^2" << endl;
 	cout << "Interval: a = " << A << ", b = " << B << endl;
 	cout << "f(" << A << ") = " << nonlinearFunction(A) << setw(8) << "f(" << B << ") = " << nonlinearFunction(B) << endl << endl;
-	cout << "Newton's method:\n\n";
+	//cout << "Newton's method:\n\n";
 	//cout << "\nValue of F(x): " << newtonMethod_ex1(A, B, PRECISION) << endl;
 	//cout << "\nValue of F(x): " << newtonMethod_ex2(A, B) << endl;
+
+	cout << "Secant method:\n\n";
 	cout << "\nValue of F(x): " << secantMethod_ex1(A, B, PRECISION) << endl;
 	//cout << "\nValue of F(x): " << secantMethod_ex2(A, B) << endl;
 
